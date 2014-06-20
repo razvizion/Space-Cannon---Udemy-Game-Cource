@@ -17,8 +17,8 @@
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
     
     // Create and configure the scene.
     SKScene * scene = [CCMyScene sceneWithSize:skView.bounds.size];
@@ -40,6 +40,10 @@
     } else {
         return UIInterfaceOrientationMaskAll;
     }
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning
